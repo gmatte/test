@@ -72,6 +72,7 @@ public class Saisir extends JFrame implements ActionListener {
 		
 		panel4.setLayout(new FlowLayout());
 		panel4.add(valider);
+		panel4.add(voir);
 		
 		panel5.setLayout(new BorderLayout());
 		panel5.add(panel1, BorderLayout.NORTH);
@@ -119,37 +120,8 @@ public class Saisir extends JFrame implements ActionListener {
 		}
 		
 		if(event.getSource() == voir){
-			/*try {
-				Connection con = null;
-				try {
-					Class.forName("org.postgresql.Driver");	
-					con = DriverManager.getConnection("jdbc:postgresql:lesCanadaires", "gmatte", "AaSr03*");
-				} 
-				
-				catch (ClassNotFoundException e) {
-					System.out.println("Driver non chargé !\n"+e);
-				}
-				
-				catch(SQLException sqlError){
-					System.out.println("Problème de connexion !\n"+sqlError);
-				}
-				
-				Statement st = con.createStatement();
-				String sql = "SELECT * FROM pilotes";
-				ResultSet rs = st.executeQuery(sql);
-				while(rs.next()){
-					int num = rs.getInt("numPilote");
-					String nom = rs.getString(2);
-					String prenom = rs.getString(3);
-					System.out.println("Pilote : "+num+" "+nom+" "+prenom);
-				}
-				rs.close();
-				
-			} 
-			
-			catch (SQLException e) {
-				System.out.println("Erreur !\n"+e);			
-			}  */
+			FenetreAfficherSelect fen = new FenetreAfficherSelect();
+ 
 		}
 	}
 	
