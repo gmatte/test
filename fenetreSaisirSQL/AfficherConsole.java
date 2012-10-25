@@ -45,6 +45,8 @@ public class AfficherConsole {
 			System.out.println("Erreur !\n"+e);			
 		}
 		
+		System.out.println("Couic !");
+		
 	}
 
 }
